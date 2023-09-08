@@ -72,3 +72,36 @@ h1, p {
 .item3 {
 	background-color: #56CE67;
 }
+
+
+
+.flex-reproduce {
+	display: flex;
+	width: 20em;
+	border: 1px solid rgb(31, 31, 127);
+	border-radius: 0.2em;
+	padding: 0.1em;
+	margin-bottom: 0.5em;
+}
+.flex-reproduce > * {
+	flex: 0 0 2em;
+	height: 2em;
+	border: 1px solid rgb(31, 31, 127);
+	border-radius: 0.2em;
+	margin: 0.1em;
+	background-color: rgb(94, 94, 230);
+}
+.flex-1 {
+	flex: 1 0 0;
+}
+.flex-2 {
+	flex: 2 0 0;
+}
+.flex-3 {
+	flex: 3 0 0;
+}
+
+/* Avancerad teknik: det går att välja ut element vars CSS-klasser innehåller en sträng */
+/* [class*="flex-"] {
+	border: 2px dotted pink;
+} */
