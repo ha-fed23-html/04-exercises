@@ -1,0 +1,65 @@
+/* Do not change this code */
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+header, main, footer {
+	padding: 1em;
+}
+main {
+	flex-grow: 1;
+}
+/* Write your code below */
+/* 3a Sätt bakgrundsfärg på header till något färgglatt,
+main till en ljus färg och footer till svart. Ändra samtidigt textfärgen,
+så att texten fortfarande är lätt att läsa. */
+header {
+	background-color: #EB47B9;
+}
+main {
+	background-color: #de8dc6;
+}
+footer {
+	background-color: rgb(22, 22, 22);
+	color: rgb(238, 235, 235);
+}
+
+/* 3b Öka mellanrummen mellan elementen i formuläret. Lägg "Title" på en egen rad. */
+label {
+	display: block;
+	margin-top: 1em;
+}
+input {
+	display: block;
+}
+textarea {
+	margin: 1em 0;
+	display: block;
+}
+
+/* 3c Texten i <footer> ska vara placerad i mitten av raden,
+men fortfarande vara vänsterjusterad. */
+footer .address {
+	border: 1px dotted pink;
+}
+footer {
+	/* Gör footer till en flex container. Den lägger ut .address med hjälp av flex-metoden.
+	justify-content justerar längs med MAIN AXIS, som är horisontellt. Inuti .address läggs p-elementen ut med flow layout (webbläsarens standard) under varandra, eftersom de är block-element. */
+	display: flex;
+	justify-content: center;
+}
+footer .address {
+	/* Margin auto gör så att ett elements vänster- och högermarginaler blir lika stora, alltså centrera elementet. Men eftersom p-elementen är block-element vill de fylla ut hela sidan. Därför blir marginalerna 0. */
+	/* margin: auto; */
+
+	/* Gör .address till en flex container. Den lägger ut p-elementen med flex-metoden i en kolumn. Main axis är kolumn/vertikalt. Align-items justerar längs cross axis, dvs horisontellt. Varje p-element centreras på sin rad. Det innebär att de får olika storlek och effekten är att texten blir centrerad i stället för vänsterjusterad. */
+	/* display: flex;
+	flex-direction: column;
+	align-items: center; */
+}
